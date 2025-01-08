@@ -39,9 +39,17 @@ const quotes = [
         quote: "유명한 사람이 말한 명언10",
         author: "유명한 사람10"
     }
+    ,
+    {
+        quote: "유명한 사람이 말한 명언11",
+        author: "유명한 사람11"
+    }
 ];
 
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
 
-console.log(quotes[7]);
+const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+quote.innerText = todaysQuote.quote;
+author.innerText = todaysQuote.author;
